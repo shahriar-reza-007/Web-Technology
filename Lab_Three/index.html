@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIR QUALITY INDEX</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .box {
+      border: 3px solid black;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .box1 {
+      width: 600px;
+      height: 610px;
+      line-height: 50px;
+    }
+    .box2 {
+      width: 600px;
+      height: 630px;
+      line-height: 100px;
+      margin-left: 0px;
+    }
+    .registration-box {
+      width: 600px;
+      height: 770px;
+      text-align: left;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .box4 {
+      width: 600px;
+      height: 470px;
+      line-height: 50px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    input, select {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+    button {
+      background-color: blue;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: darkblue;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .checkbox-row input[type="checkbox"] {
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+    .checkbox-row label {
+      margin: 0;
+      font-weight: normal;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="AQI.jpg" alt="AIR QUALITY INDEX Logo" style="width: 150px; height: 150px;">
+    <h1>AIR QUALITY INDEX</h1>
+  </div>
+
+  <div class="container">
+    <div>
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+    </div>
+    <div>
+      <div class="box registration-box">
+        <h2>Registration</h2>
+        <form>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <label for="confirmpassword">Confirm Password:</label>
+          <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+
+          <label for="zipcode">Zip Code:</label>
+          <input type="text" id="zipcode" name="zipcode" required>
+
+          <label for="city">Preferred City:</label>
+          <select id="city" name="city">
+            <option value="dhaka">Dhaka</option>
+            <option value="Tangail">Tangail</option>
+            <option value="chittagong">Chittagong</option>
+            <option value="khulna">Khulna</option>
+            <option value="rajshahi">Rajshahi</option>
+            <option value="sylhet">Sylhet</option>
+          </select>
+
+          <!-- Properly aligned checkbox -->
+          <div class="checkbox-row">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="box box4">Box 4</div>
+    </div>
+  </div>
+  <script src="validation.js"></script>
+</body>
+</html>
